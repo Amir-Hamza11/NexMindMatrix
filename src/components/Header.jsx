@@ -13,7 +13,7 @@ export default function Header() {
           to="/"
           className="font-bold text-xl text-nm-700 flex items-center gap-3"
         >
-          <img src="/src/assets/img/logo.png" alt="logo" className="h-10 w-10" />
+          <img src="/images/logo.png" alt="logo" className="h-10 w-10" />
           NexMindMatrix
         </Link>
 

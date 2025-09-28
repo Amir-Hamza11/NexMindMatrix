@@ -19,7 +19,7 @@ export default function B2BSection() {
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 
                 {/* Header */}
-                <h2 className="text-2xl sm:text-3xl font-bold text-pink-600 mb-3">B2B Panel Highlights</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-600 mb-3">B2B Panel Highlights</h2>
                 <p className="text-gray-700 mb-10 max-w-3xl mx-auto">
                     Our B2B panel connects businesses with decision-makers, executives, and specialists across diverse industries. We focus on delivering accurate, high-quality data to drive informed business strategies and partnerships.
                 </p>

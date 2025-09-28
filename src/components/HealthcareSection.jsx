@@ -4,7 +4,7 @@ export default function HealthcareSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
         {/* Header */}
-        <h2 className="text-2xl sm:text-3xl font-bold text-pink-600 mb-3">
+        <h2 className="text-2xl sm:text-3xl font-bold text-gray-600 mb-3">
           Healthcare Panels
         </h2>
         <p className="text-gray-700 max-w-4xl mx-auto leading-relaxed">

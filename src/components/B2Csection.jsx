@@ -5,7 +5,7 @@ export default function B2Csection() {
         
         {/* Heading */}
         <div className="mb-10 text-center">
-          <h2 className="text-3xl font-bold text-pink-600">B2C Panel Highlights</h2>
+          <h2 className="text-3xl font-bold text-gray-600">B2C Panel Highlights</h2>
           <p className="mt-2 text-gray-700 max-w-3xl mx-auto">
             Online methodology is the most cost-efficient way to reach B2C audiences. 
             Over the years, we’ve conducted many repeat studies for our clients.

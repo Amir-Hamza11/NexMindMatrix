@@ -1,128 +1,4 @@
-// import { useState, useEffect } from "react";
-// import { ChevronLeft, ChevronRight } from "lucide-react";
-
-// const HeroSection = () => {
-//   const slides = [
-//     {
-//       image: "/images/collab.jpg",
-//       title:
-//         "Adaptable technology and expertise tailored to your business needs",
-//       text: "We blend innovation with deep industry insight to deliver actionable intelligence.",
-//     },
-//     {
-//       image: "/images/team.jpg",
-//       title: "At NexMindMatrix, quality and service drive everything we do",
-//       text: "Your goals power our process — we deliver results you can trust.",
-//     },
-//     {
-//       image: "/images/kampus.jpg",
-//       title: "Your trusted partner for growth, from insights to action",
-//       text: "We transform data into strategies that accelerate your business growth.",
-//     },
-//   ];
-
-//   const [current, setCurrent] = useState(0);
-//   const [prev, setPrev] = useState(0);
-
-//   const changeSlide = (newIndex) => {
-//     setPrev(current);
-//     setCurrent(newIndex);
-//   };
-
-//   const prevSlide = () => {
-//     changeSlide(current === 0 ? slides.length - 1 : current - 1);
-//   };
-
-//   const nextSlide = () => {
-//     changeSlide(current === slides.length - 1 ? 0 : current + 1);
-//   };
-
-//   useEffect(() => {
-//     const timer = setInterval(() => {
-//       nextSlide();
-//     }, 8000);
-//     return () => clearInterval(timer);
-//   }, [current]);
-
-//   return (
-//     <section className="relative w-full h-screen overflow-hidden">
-//       {/* Previous image (for fading transition) */}
-//       <div
-//         className="absolute inset-0 bg-cover bg-center opacity-0 scale-105 transition duration-1000 ease-out"
-//         style={{ backgroundImage: `url(${slides[prev].image})` }}
-//       />
-
-//       {/* Current image */}
-//       <div
-//         className="absolute inset-0 bg-cover bg-center opacity-100 scale-100 transition duration-1000 ease-in"
-//         style={{ backgroundImage: `url(${slides[current].image})` }}
-//       />
-
-//       {/* Gradient overlay for readability */}
-//       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
-
-//       {/* Content */}
-//       <div className="relative z-10 flex items-center h-full px-6 md:px-16">
-//         <div className="max-w-3xl text-white text-center md:text-left">
-//           <h1
-//             key={slides[current].title}
-//             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fadeIn"
-//           >
-//             {slides[current].title}
-//           </h1>
-//           <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-8 max-w-2xl animate-fadeIn delay-200">
-//             {slides[current].text}
-//           </p>
-
-//           {/* CTA Buttons */}
-//           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center md:justify-start">
-//             <button className="px-6 py-3 bg-nm-800 hover:bg-nm-900 text-white font-semibold rounded-lg shadow-lg transition">
-//               Get Free Consultation
-//             </button>
-//             <button className="px-6 py-3 border border-white/80 hover:bg-white/20 rounded-lg text-white transition">
-//               Learn More
-//             </button>
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* Left arrow */}
-//       <button
-//         onClick={prevSlide}
-//         aria-label="Previous Slide"
-//         className="absolute top-1/2 left-3 sm:left-6 transform -translate-y-1/2 z-20 bg-white/30 hover:bg-white/50 p-2 rounded-full"
-//       >
-//         <ChevronLeft className="text-white w-6 h-6" />
-//       </button>
-
-//       {/* Right arrow */}
-//       <button
-//         onClick={nextSlide}
-//         aria-label="Next Slide"
-//         className="absolute top-1/2 right-3 sm:right-6 transform -translate-y-1/2 z-20 bg-white/30 hover:bg-white/50 p-2 rounded-full"
-//       >
-//         <ChevronRight className="text-white w-6 h-6" />
-//       </button>
-
-//       {/* Pagination dots */}
-//       <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3 z-20">
-//         {slides.map((_, index) => (
-//           <button
-//             key={index}
-//             onClick={() => changeSlide(index)}
-//             className={`w-4 h-4 rounded-full transition-all ${
-//               current === index
-//                 ? "bg-nm-800 scale-125 shadow-md animate-pulse"
-//                 : "bg-white/60 hover:bg-white"
-//             }`}
-//           />
-//         ))}
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default HeroSection;
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -161,12 +37,12 @@ const HeroSection = () => {
           Transform your data into actionable insights. Our research methodology blends proven strategies with innovative tools tailored to drive your business forward.
         </p>
         <div className="flex gap-6">
-          <button className="bg-gradient-to-r from-[#ff7e6b] to-[#f6e27e] text-nm-900 font-semibold px-8 py-3 rounded-lg shadow-lg hover:from-[#f6e27e] hover:to-[#ff7e6b] transition">
+          <Link to="/contact" className="bg-gradient-to-r from-[#ff7e6b] to-[#f6e27e] text-nm-900 font-semibold px-8 py-3 rounded-lg shadow-lg hover:from-[#f6e27e] hover:to-[#ff7e6b] transition">
             Get Started
-          </button>
-          <button className="border-2 border-nm-600 text-nm-600 px-8 py-3 rounded-lg hover:bg-nm-800 transition">
+          </Link>
+          <Link to="/services" className="border-2 border-nm-600 text-nm-600 px-8 py-3 rounded-lg hover:bg-nm-800 transition">
             Learn More
-          </button>
+          </Link>
         </div>
       </div>
 
